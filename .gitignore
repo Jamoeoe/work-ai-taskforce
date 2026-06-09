@@ -11,6 +11,8 @@
 *.sln.docstates
 *.env
 
+ai_output.py
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
