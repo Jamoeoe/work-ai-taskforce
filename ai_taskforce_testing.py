@@ -45,7 +45,7 @@ Make sure your response can be executed as python code, without removing any cha
 
 n = 5 # the number of responses per prompt, increasing this reduces the chance of a failed run
 response = client.chat.completions.create(
-    model="gemini-2.5-flash",
+    model="gemini-3.5-flash",
     messages=[
         {"role": "user", "content": message}
     ],
