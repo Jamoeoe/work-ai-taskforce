@@ -1,5 +1,17 @@
-winget install -e --id Python.Python.3.12
-python -m pip install --upgrade pip
+cd %~dp0
+cd ..
 
-REM everything below here is to setup the docker container for the script so that the generated code can't do anything truly stupid
-winget install Docker.DockerCLI
+REM create .env file
+echo GENAI_KEY=your_api_key > ".env"
+
+REM install python and pip
+winget install -e --id Python.Python.3.12
+
+REM create venv, and install required packages
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install --upgrade pip --trusted-host pypi.org --trusted-host files.pythonhosted.org
+.venv\Scripts\python.exe -m pip install dotenv --trusted-host pypi.org --trusted-host files.pythonhosted.org
+.venv\Scripts\python.exe -m pip install matplotlib --trusted-host pypi.org --trusted-host files.pythonhosted.org 
+.venv\Scripts\python.exe -m pip install pandas --trusted-host pypi.org --trusted-host files.pythonhosted.org
+.venv\Scripts\python.exe -m pip install openpyxl --trusted-host pypi.org --trusted-host files.pythonhosted.org  
+.venv\Scripts\python.exe -m pip install openai --trusted-host pypi.org --trusted-host files.pythonhosted.org  

@@ -11,7 +11,9 @@ data = pd.read_excel(f"data/{data_files[0]}")
 capture_info = io.StringIO()
 data.info(buf=capture_info)
 
-load_dotenv()
+if os.path.exists(".env"):
+    load_dotenv()
+
 client = openai.OpenAI(
     base_url="https://api.genai.mil/v1",
     api_key=os.getenv("GENAI_KEY")
@@ -70,7 +72,7 @@ if valid == -1:
     print("\n\n\n\nNo response from AI valid\n\n\n\n")
     exit(0)
 
-with open("ai_output.py", "w") as f:
+with open("src/ai_output.py", "w") as f:
     f.write(
 f"""
 import pandas as pd
