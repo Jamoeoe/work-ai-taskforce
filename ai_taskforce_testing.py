@@ -40,17 +40,19 @@ Show me the code I need to insert at the comment to do the following:
 2. Create and show visualizations of the 3 most critical take aways using plt. 
 I like when the titles of my graphs are spaced out from the graph itself so it doesn't overlap. 
 
+If relevant, consider multi factor interactions in the data.
+
 Make sure your response can be executed as python code, without removing any characters or cleaning. Do not include any markdown formatting or backticks such as ```python ```.
 """
 
 n = 5 # the number of responses per prompt, increasing this reduces the chance of a failed run
 response = client.chat.completions.create(
-    model="gemini-3.5-flash",
+    model="gemini-3.5-flash", # in testing this model performs best of all available
     messages=[
         {"role": "user", "content": message}
     ],
     n=n,
-    temperature=0.01, # makes most of the responses similar, turn up to make it more creative, but increases failure rate
+    temperature=1, # determines how creative the model is with the response, turn up to make it more creative, but increases failure rate
     prompt_cache_key=None # makes it so the api won't remember previous runs
 )
 
