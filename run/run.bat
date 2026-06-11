@@ -1,0 +1,1 @@
+.venv\Scripts\python.exe ai_taskforce_testing.py
