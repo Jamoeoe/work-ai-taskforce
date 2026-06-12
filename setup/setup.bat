@@ -2,7 +2,9 @@ cd %~dp0
 cd ..
 
 REM create .env file
-echo GENAI_KEY=your_api_key > ".env"
+IF NOT EXIST ".env" (
+    echo GENAI_KEY=your_api_key > ".env"
+)
 
 REM install python and pip
 winget install -e --id Python.Python.3.12
