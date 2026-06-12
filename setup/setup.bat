@@ -6,7 +6,7 @@ IF NOT EXIST ".env" (
     echo GENAI_KEY=your_api_key > ".env"
 )
 
-REM install python and pip
+REM install python
 winget install -e --id Python.Python.3.12
 
 REM create venv, and install required packages
