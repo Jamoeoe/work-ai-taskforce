@@ -30,3 +30,8 @@ The prototype is best used as a tool to vector your attention and give you ideas
 ## Uninstalling things installed by setup
 
 1. Run `setup/uninstall.bat` this will uninstall Python 3.12. You can also just delete the .venv folder to remove installed Python packages.
+
+## AI API Docs
+
+- (GenAI Docs)[https://genai.mil/stark/user-ui/docs]  
+- (Full API Spec)[https://genai.mil/stark/api/swagger-ui/]
