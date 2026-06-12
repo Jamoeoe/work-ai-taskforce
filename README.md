@@ -33,5 +33,5 @@ The prototype is best used as a tool to vector your attention and give you ideas
 
 ## AI API Docs
 
-- (GenAI Docs)[https://genai.mil/stark/user-ui/docs]  
-- (Full API Spec)[https://genai.mil/stark/api/swagger-ui/]
+- [GenAI Docs](https://genai.mil/stark/user-ui/docs) 
+- [Full API Spec](https://genai.mil/stark/api/swagger-ui/)
