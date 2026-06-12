@@ -1,5 +1,5 @@
 .env
-ai_output.py
 .venv
+src/ai_output.py
 data/*
 !data/sample_data.xlsx
