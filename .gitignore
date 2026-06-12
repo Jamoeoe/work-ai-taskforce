@@ -6,6 +6,8 @@
 .env
 ai_output.py
 .venv
+data/*
+!data/sample_data.xlsx
 
 # User-specific files
 *.rsuser
